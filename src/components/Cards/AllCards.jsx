@@ -1,6 +1,7 @@
 import Card from './Card';
 
-const AllCards = ({ cardInfos, selectedCards, setSelectedCards, countCart, setCountCart }) => {
+const AllCards = ({ cardInfos, selectedCards, setSelectedCards, setCountCart, total, setTotal }) => {
+
 
     setCountCart(selectedCards.length);
     return (
@@ -8,7 +9,7 @@ const AllCards = ({ cardInfos, selectedCards, setSelectedCards, countCart, setCo
 
 
             {
-                cardInfos.map(cardInfo => <Card selectedCards={selectedCards} setSelectedCards={setSelectedCards} cardInfo={cardInfo}></Card>)
+                cardInfos.map(cardInfo => <Card total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} cardInfo={cardInfo}></Card>)
             }
 
         </div>

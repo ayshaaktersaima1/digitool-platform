@@ -10,6 +10,7 @@ const PremiumBtns = ({ fetchData }) => {
     const [activeBtn, setActiveBtn] = useState('product');
 
     const [countCart, setCountCart] = useState(0);
+    const [total, setTotal] = useState(0);
 
 
     return (
@@ -26,7 +27,7 @@ const PremiumBtns = ({ fetchData }) => {
             </div>
             {
                 activeBtn === 'product' ?
-                    <AllCards cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AllCards> : <AddedCards selectedCards={selectedCards} setSelectedCards={setSelectedCards}></AddedCards>
+                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards}></AddedCards>
             }
         </div>
     );

@@ -1,13 +1,17 @@
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 
-const Card = ({ cardInfo, selectedCards, setSelectedCards }) => {
-    const { id, name, description, price, period, tag, features } = cardInfo;
+const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) => {
+    const { name, description, price, period, tag, features, icon } = cardInfo;
     const [buyActiveBtn, setBuyActiveBtn] = useState(false);
+
 
 
     const handleBuyBtn = () => {
         setBuyActiveBtn(!buyActiveBtn);
         setSelectedCards([...selectedCards, cardInfo]);
+        const newTotal = total + price;
+        setTotal(newTotal);
+
 
     }
 
@@ -18,10 +22,10 @@ const Card = ({ cardInfo, selectedCards, setSelectedCards }) => {
                 <div className="card-body">
 
                     <div className='flex justify-between'>
-                        <div>
-                            <h1>icon</h1>
+                        <div className='border border-[#f2f2f2] rounded-full p-4'>
+                            <img className='w-8 h-8' src={icon} alt="" />
                         </div>
-                        <span className={`badge badge-xs capitalize p-3 rounded-3xl font-bold
+                        <span className={`badge badge-xs capitalize p-3 rounded-3xl font-bold text-[12px]
                         ${tag === 'popular' ? 'bg-[#e1e7ff] text-[#9514fa]' : tag === 'new' ? 'bg-[#dbfce7] text-[#0a883e]' : tag === 'best seller' ? 'bg-[#fef3c6] text-[#bb4d00]' : ''}`}>{tag}</span>
                     </div>
                     <div>

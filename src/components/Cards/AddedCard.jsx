@@ -1,7 +1,11 @@
 import React from 'react';
-import { FileText } from 'lucide-react';
 
-const AddedCard = ({ selectedCard, setSelectedCards }) => {
+const AddedCard = ({ selectedCard }) => {
+
+    // const newTotal = total + selectedCard.price;
+    // setTotal(newTotal)
+
+
     return (
         <div className='bg-[#f9fafc] p-5 rounded-2xl'>
             <div className='flex items-center  justify-between'>
