@@ -1,11 +1,24 @@
 import React from 'react';
 
-const AddedCard = ({ selectedCard }) => {
+const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTotal, index, countCart, setCountCart }) => {
 
     // const newTotal = total + selectedCard.price;
     // setTotal(newTotal)
 
 
+    const handleRemoveBtn = (selectedCard, cardIndex) => {
+        console.log(cardIndex)
+        const finalCarts = selectedCards.filter((finalCard, index) => index !== cardIndex);
+        setSelectedCards(finalCarts);
+        const newTotalAfterRmv = total - selectedCard.price;
+        setTotal(newTotalAfterRmv);
+
+        setCountCart(finalCarts.length)
+
+
+
+
+    }
     return (
         <div className='bg-[#f9fafc] p-5 rounded-2xl'>
             <div className='flex items-center  justify-between'>
@@ -21,7 +34,7 @@ const AddedCard = ({ selectedCard }) => {
                 </div>
                 {/* right */}
                 <div>
-                    <button className='btn btn btn-ghost text-[#ff3980] text-bold'>Remove</button>
+                    <button onClick={() => { handleRemoveBtn(selectedCard, index) }} className='btn btn-ghost text-[#ff3980] text-bold'>Remove</button>
                 </div>
             </div>
 

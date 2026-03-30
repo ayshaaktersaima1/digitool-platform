@@ -27,7 +27,7 @@ const PremiumBtns = ({ fetchData }) => {
             </div>
             {
                 activeBtn === 'product' ?
-                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards}></AddedCards>
+                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AddedCards>
             }
         </div>
     );
