@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Card = ({ cardInfo }) => {
     const { name, description, price, period, tag, features } = cardInfo;
+    const [buyActiveBtn, setBuyActiveBtn] = useState(false);
+    const [textOfBtn, setTextOfBtn] = useState('Buy Now');
 
     return (
         <div>
@@ -40,7 +42,10 @@ const Card = ({ cardInfo }) => {
 
                     </ul>
                     <div className="mt-6">
-                        <button className="btn text-white font-bold bg-linear-65 from-[#4f39f6] to-[#9514fa] rounded-3xl btn-block">Buy Now</button>
+                        <button onClick={() => {
+                            setBuyActiveBtn(!buyActiveBtn);
+                            setTextOfBtn(buyActiveBtn === true ? 'Buy Now' : '✓ Added to Cart!');
+                        }} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{textOfBtn}</button>
                     </div>
                 </div>
             </div>

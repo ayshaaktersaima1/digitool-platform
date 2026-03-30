@@ -8,6 +8,7 @@ const PremiumBtns = ({ fetchData }) => {
 
     const [activeBtn, setActiveBtn] = useState('product');
 
+
     return (
         <div className='mt-8 lg:mt-30 space-y-4 mx-2 md:mx-[10%]  flex flex-col items-center mb-11'>
             <h1 className='text-color font-extrabold text-5xl'>Premium Digital Tools</h1>
