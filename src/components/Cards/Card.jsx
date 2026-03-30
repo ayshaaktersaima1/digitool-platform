@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 
 const Card = ({ cardInfo, selectedCards, setSelectedCards }) => {
     const { id, name, description, price, period, tag, features } = cardInfo;
     const [buyActiveBtn, setBuyActiveBtn] = useState(false);
-    // const [textOfBtn, setTextOfBtn] = useState('Buy Now');
+
 
     const handleBuyBtn = () => {
         setBuyActiveBtn(!buyActiveBtn);

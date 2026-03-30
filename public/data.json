@@ -13,7 +13,7 @@
             "Export to PDF",
             "AI content suggestions"
         ],
-        "icon": "FileText"
+        "icon": "https://i.ibb.co.com/XkdVpxRK/folder.png"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@
             "SEO optimized pages",
             "Responsive design"
         ],
-        "icon": "Globe"
+        "icon": "https://i.ibb.co.com/vvKJCt2z/content.png"
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@
             "Download as PDF",
             "Job description matching"
         ],
-        "icon": "PenLine"
+        "icon": "https://i.ibb.co.com/m54bg9Mc/stars.png"
     },
     {
         "id": 4,
@@ -61,7 +61,7 @@
             "Profile review report",
             "Recruiter visibility tips"
         ],
-        "icon": "User"
+        "icon": "https://i.ibb.co.com/tMz0Tt74/profile.png"
     },
     {
         "id": 5,
@@ -77,7 +77,7 @@
             "Editable templates",
             "Export to PDF"
         ],
-        "icon": "Send"
+        "icon": "https://i.ibb.co.com/Ldshzb8P/sign.png"
     },
     {
         "id": 6,
@@ -93,6 +93,6 @@
             "Download as PDF",
             "Payment tracking"
         ],
-        "icon": "Receipt"
+        "icon": "https://i.ibb.co.com/r2htVnHK/invoice.png"
     }
 ]
