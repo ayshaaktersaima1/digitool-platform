@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 
-const Card = ({ cardInfo }) => {
-    const { name, description, price, period, tag, features } = cardInfo;
+const Card = ({ cardInfo, selectedCards, setSelectedCards }) => {
+    const { id, name, description, price, period, tag, features } = cardInfo;
     const [buyActiveBtn, setBuyActiveBtn] = useState(false);
-    const [textOfBtn, setTextOfBtn] = useState('Buy Now');
+    // const [textOfBtn, setTextOfBtn] = useState('Buy Now');
+
+    const handleBuyBtn = () => {
+        setBuyActiveBtn(!buyActiveBtn);
+        setSelectedCards([...selectedCards, cardInfo]);
+
+    }
+
 
     return (
         <div>
@@ -42,10 +49,7 @@ const Card = ({ cardInfo }) => {
 
                     </ul>
                     <div className="mt-6">
-                        <button onClick={() => {
-                            setBuyActiveBtn(!buyActiveBtn);
-                            setTextOfBtn(buyActiveBtn === true ? 'Buy Now' : '✓ Added to Cart!');
-                        }} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{textOfBtn}</button>
+                        <button onClick={handleBuyBtn} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{buyActiveBtn === false ? 'Buy Now' : '✓ Added to Cart!'}</button>
                     </div>
                 </div>
             </div>

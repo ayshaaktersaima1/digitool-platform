@@ -5,6 +5,7 @@ import AddedCards from './Cards/AddedCards';
 const PremiumBtns = ({ fetchData }) => {
 
     const cardInfos = use(fetchData);
+    const [selectedCards, setSelectedCards] = useState([]);
 
     const [activeBtn, setActiveBtn] = useState('product');
 
@@ -23,7 +24,7 @@ const PremiumBtns = ({ fetchData }) => {
             </div>
             {
                 activeBtn === 'product' ?
-                    <AllCards cardInfos={cardInfos}></AllCards> : <AddedCards></AddedCards>
+                    <AllCards cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards}></AllCards> : <AddedCards selectedCards={selectedCards} setSelectedCards={setSelectedCards}></AddedCards>
             }
         </div>
     );

@@ -1,9 +1,14 @@
 import React from 'react';
+import AddedCard from './AddedCard';
 
-const AddedCards = () => {
+const AddedCards = ({ selectedCards, setSelectedCards }) => {
+
+    console.log(selectedCards)
     return (
         <div>
-            <h1>Nothing here</h1>
+            {
+                selectedCards.map(selectedCard => <AddedCard selectedCard={selectedCard} setSelectedCards={setSelectedCards}></AddedCard>)
+            }
         </div>
     );
 };
