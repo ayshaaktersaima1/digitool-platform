@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "AI Resume Builder",
+        "description": "Create professional resumes using AI-powered suggestions and ATS optimization.",
+        "price": 19,
+        "period": "monthly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "100+ resume templates",
+            "ATS optimization",
+            "Export to PDF",
+            "AI content suggestions"
+        ],
+        "icon": "FileText"
+    },
+    {
+        "id": 2,
+        "name": "Portfolio Website Generator",
+        "description": "Build a personal portfolio website instantly with customizable templates.",
+        "price": 29,
+        "period": "one-time",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "50+ portfolio layouts",
+            "Custom domain support",
+            "SEO optimized pages",
+            "Responsive design"
+        ],
+        "icon": "Globe"
+    },
+    {
+        "id": 3,
+        "name": "AI Cover Letter Writer",
+        "description": "Generate personalized cover letters tailored to job descriptions.",
+        "price": 9,
+        "period": "monthly",
+        "tag": "best seller",
+        "tagType": "best-seller",
+        "features": [
+            "AI writing assistant",
+            "Multiple tone options",
+            "Download as PDF",
+            "Job description matching"
+        ],
+        "icon": "PenLine"
+    },
+    {
+        "id": 4,
+        "name": "LinkedIn Profile Optimizer",
+        "description": "Improve your LinkedIn profile visibility with AI-driven suggestions.",
+        "price": 15,
+        "period": "monthly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "Headline generator",
+            "Keyword optimization",
+            "Profile review report",
+            "Recruiter visibility tips"
+        ],
+        "icon": "User"
+    },
+    {
+        "id": 5,
+        "name": "Freelance Proposal Generator",
+        "description": "Generate high-converting freelance proposals for clients.",
+        "price": 12,
+        "period": "monthly",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "AI proposal writing",
+            "Client personalization",
+            "Editable templates",
+            "Export to PDF"
+        ],
+        "icon": "Send"
+    },
+    {
+        "id": 6,
+        "name": "Invoice Maker Pro",
+        "description": "Create and manage professional invoices for clients.",
+        "price": 25,
+        "period": "yearly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "Custom invoice templates",
+            "Automatic tax calculation",
+            "Download as PDF",
+            "Payment tracking"
+        ],
+        "icon": "Receipt"
+    }
+]
