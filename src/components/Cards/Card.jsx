@@ -3,20 +3,17 @@ import { toast } from 'react-toastify';
 
 const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal, setNavCount }) => {
     const { name, description, price, period, tag, features, icon } = cardInfo;
-    // const [buyActiveBtn, setBuyActiveBtn] = useState(false);
 
     const handleBuyBtn = () => {
-        // setBuyActiveBtn(!buyActiveBtn);
-        setSelectedCards([...selectedCards, cardInfo]);
         const newSelected = [...selectedCards, cardInfo];
+        setSelectedCards(newSelected);
+        setNavCount(newSelected.length);
         const newTotal = total + price;
         setTotal(newTotal);
         toast.success(`${name} is Added to Cart!`);
-        setNavCount(newSelected.length);
 
 
     }
-
 
     return (
         <div>
