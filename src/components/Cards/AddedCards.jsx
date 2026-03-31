@@ -3,7 +3,9 @@ import EmptyCard from './EmptyCard';
 
 const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCart, setCountCart }) => {
 
-
+    const handleCheckoutBtn = () => {
+        setSelectedCards([]);
+    }
     // const [total, setTotal] = useState(0);
 
     return (
@@ -17,7 +19,10 @@ const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCar
                     <div className='flex justify-between items-center'>
                         <h3 className='text-sec'>Total:</h3>
                         <h2 className='text-2xl font-bold text-color'>${total}</h2>
-                    </div></>)
+
+                    </div>
+                    <div>
+                        <button onClick={handleCheckoutBtn} className='btn btn-block rounded-3xl text-white bg-linear-65 from-[#4f39f6] to-[#9514fa] font-bold'>Proceed to Checkout</button></div></>)
             }
 
         </div>
