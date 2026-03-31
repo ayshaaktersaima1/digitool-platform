@@ -5,6 +5,7 @@ import Banner from './components/Banner'
 import Highlight from './components/Highlight'
 import PremiumBtns from './components/PremiumBtns'
 import { Suspense } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
       <Suspense>
         <PremiumBtns fetchData={fetchData}></PremiumBtns>
       </Suspense>
+
+      <ToastContainer />
     </>
   )
 }

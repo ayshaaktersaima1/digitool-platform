@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) => {
     const { name, description, price, period, tag, features, icon } = cardInfo;
@@ -11,8 +12,7 @@ const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) =>
         setSelectedCards([...selectedCards, cardInfo]);
         const newTotal = total + price;
         setTotal(newTotal);
-
-
+        toast.success(`${name} is Added to Cart!`);
     }
 
 
@@ -40,9 +40,9 @@ const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) =>
                     <ul className="mt-6 flex flex-col gap-2 text-xs">
 
                         {
-                            features.map(feature => {
+                            features.map((feature, index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                         <span className='text-sec font-medium'>{feature}</span>
                                     </li>

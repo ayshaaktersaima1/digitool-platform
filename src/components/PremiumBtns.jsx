@@ -6,12 +6,8 @@ const PremiumBtns = ({ fetchData }) => {
 
     const cardInfos = use(fetchData);
     const [selectedCards, setSelectedCards] = useState([]);
-
     const [activeBtn, setActiveBtn] = useState('product');
-
-    const [countCart, setCountCart] = useState(0);
     const [total, setTotal] = useState(0);
-
 
     return (
         <div className='mt-8 lg:mt-30 space-y-4 mx-2 md:mx-[10%]  flex flex-col items-center mb-11'>
@@ -23,11 +19,11 @@ const PremiumBtns = ({ fetchData }) => {
                     activeBtn==='product'? 
                 } */}
                 <button onClick={() => setActiveBtn('product')} className={`btn font-bold rounded-3xl ${activeBtn === 'product' ? 'bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white' : 'btn-ghost bg-white text-[#25065dFF]'}`}>Products</button>
-                <button onClick={() => setActiveBtn('cart')} className={`btn font-bold rounded-3xl ${activeBtn === 'cart' ? 'bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white' : 'btn-ghost bg-white text-[#25065dFF]'}`}>Cart({countCart})</button>
+                <button onClick={() => setActiveBtn('cart')} className={`btn font-bold rounded-3xl ${activeBtn === 'cart' ? 'bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white' : 'btn-ghost bg-white text-[#25065dFF]'}`}>Cart({selectedCards.length})</button>
             </div>
             {
                 activeBtn === 'product' ?
-                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AddedCards>
+                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} ></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} ></AddedCards>
             }
         </div>
     );

@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import AddedCard from './AddedCard';
 import EmptyCard from './EmptyCard';
 
@@ -5,8 +6,8 @@ const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCar
 
     const handleCheckoutBtn = () => {
         setSelectedCards([]);
+        toast.success('Proceeding to Checkout..');
     }
-    // const [total, setTotal] = useState(0);
 
     return (
         <div className='border border-[#F2F2F2] rounded-2xl w-full p-10 space-y-4'>
