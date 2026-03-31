@@ -7,6 +7,7 @@ const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCar
     const handleCheckoutBtn = () => {
         setSelectedCards([]);
         toast.success('Proceeding to Checkout..');
+        setTotal(0);
     }
 
     return (
