@@ -9,7 +9,7 @@ const GetStartedSec = () => {
             <h1 className=' text-center text-color text-5xl font-extrabold mb-4'>Get Started in 3 Steps</h1>
             <p className='text-center text-sec'>Start using premium digital tools in minutes, not hours.</p>
             {/* card con*/}
-            <div className='mx-2 md:mx-[10%] mt-10 grid grid-cols-3 gap-7'>
+            <div className='mx-2 md:mx-[10%] mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
                 {/* 1st card */}
                 <div className='bg-white border border-[#f1f1f1] rounded-2xl'>
                     <div className='flex justify-end'>

@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) => {
     const { name, description, price, period, tag, features, icon } = cardInfo;
-    const [buyActiveBtn, setBuyActiveBtn] = useState(false);
-
-
+    // const [buyActiveBtn, setBuyActiveBtn] = useState(false);
 
     const handleBuyBtn = () => {
-        setBuyActiveBtn(!buyActiveBtn);
+        // setBuyActiveBtn(!buyActiveBtn);
         setSelectedCards([...selectedCards, cardInfo]);
         const newTotal = total + price;
         setTotal(newTotal);
@@ -49,11 +47,10 @@ const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal }) =>
                                 )
                             })
                         }
-
-
                     </ul>
                     <div className="mt-6">
-                        <button onClick={handleBuyBtn} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{buyActiveBtn === false ? 'Buy Now' : '✓ Added to Cart!'}</button>
+                        {/* <button onClick={handleBuyBtn} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{buyActiveBtn === false ? 'Buy Now' : '✓ Added to Cart!'}</button> */}
+                        <button onClick={handleBuyBtn} className='btn text-white font-bold rounded-3xl btn-block bg-linear-65 from-[#4f39f6] to-[#9514fa]'>Buy Now</button>
                     </div>
                 </div>
             </div>
