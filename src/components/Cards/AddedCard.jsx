@@ -1,10 +1,6 @@
 import React from 'react';
 
-const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTotal, index, countCart, setCountCart }) => {
-
-    // const newTotal = total + selectedCard.price;
-    // setTotal(newTotal)
-
+const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTotal, index, setCountCart }) => {
 
     const handleRemoveBtn = (selectedCard, cardIndex) => {
         console.log(cardIndex)
