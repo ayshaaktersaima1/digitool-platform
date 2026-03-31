@@ -11,7 +11,7 @@ const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCar
     }
 
     return (
-        <div className='border border-[#F2F2F2] rounded-2xl w-full p-10 space-y-4'>
+        <div className='border border-[#F2F2F2] rounded-2xl w-full p-1 md:p-10 space-y-4'>
             {
                 selectedCards.length === 0 ? <EmptyCard></EmptyCard> : (<>
                     <h1 className='text-2xl font-bold text-color'>Your Cart</h1>

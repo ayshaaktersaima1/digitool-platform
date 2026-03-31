@@ -21,7 +21,7 @@ const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTo
                         <img className='w-8 h-8' src={selectedCard.icon} alt="" />
                     </div>
                     <div className='space-y-2'>
-                        <h3 className='text-xl font-semibold text-color'>{selectedCard.name}</h3>
+                        <h3 className='text-lg md:text-xl font-semibold text-color'>{selectedCard.name}</h3>
                         <p className='font-medium text-sec'>${selectedCard.price}</p>
                     </div>
                 </div>
