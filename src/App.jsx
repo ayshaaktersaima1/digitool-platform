@@ -8,6 +8,7 @@ import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 import GetStartedSec from './components/GetStartedSec'
 import SimplePricingSec from './components/SimplePricingSec'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       </Suspense>
       <GetStartedSec></GetStartedSec>
       <SimplePricingSec></SimplePricingSec>
+      <Footer></Footer>
 
       <ToastContainer />
     </>
