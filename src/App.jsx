@@ -7,6 +7,7 @@ import PremiumBtns from './components/PremiumBtns'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 import GetStartedSec from './components/GetStartedSec'
+import SimplePricingSec from './components/SimplePricingSec'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <PremiumBtns fetchData={fetchData}></PremiumBtns>
       </Suspense>
       <GetStartedSec></GetStartedSec>
+      <SimplePricingSec></SimplePricingSec>
 
       <ToastContainer />
     </>

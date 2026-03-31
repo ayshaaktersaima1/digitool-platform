@@ -14,10 +14,8 @@ const PremiumBtns = ({ fetchData }) => {
             <h1 className='text-color font-extrabold text-5xl'>Premium Digital Tools</h1>
             <p className='text-sec font-normal text-base w-136 text-center'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
 
-            <div className='border border-[#f6f6f6] rounded-3xl p-[1px]'>
-                {/* {
-                    activeBtn==='product'? 
-                } */}
+            <div className='border border-[#f6f6f6] rounded-3xl p-px'>
+
                 <button onClick={() => setActiveBtn('product')} className={`btn font-bold rounded-3xl ${activeBtn === 'product' ? 'bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white' : 'btn-ghost bg-white text-[#25065dFF]'}`}>Products</button>
                 <button onClick={() => setActiveBtn('cart')} className={`btn font-bold rounded-3xl ${activeBtn === 'cart' ? 'bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white' : 'btn-ghost bg-white text-[#25065dFF]'}`}>Cart({selectedCards.length})</button>
             </div>
