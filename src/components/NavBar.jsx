@@ -1,9 +1,11 @@
-import React from 'react';
 import shoppingCartIcon from '../assets/products/shoppingcartNav.png'
 
-const NavBar = () => {
+const NavBar = ({ navCount }) => {
+
+
+
     return (
-        <div className=''>
+        <div className='sticky top-0 z-10 '>
             <div className="navbar bg-base-100 shadow-sm px-2 md:px-[10%]">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -31,8 +33,22 @@ const NavBar = () => {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end text-base">
-                    <a className="btn btn-ghost flex justify-center items-center gap-2 rounded-3xl text-[#101727]"><img src={shoppingCartIcon} alt="" />Login</a>
+                <div className="navbar-end text-base relative">
+
+
+                    <div className=" flex justify-center items-center gap-2 rounded-3xl text-base text-[#101727]">
+                        {/* <span className='absolute -top-2 h-5 w-5 bg-amber-600 border border-none rounded-full flex justify-center items-center p-3'><a className='' href="">0</a></span>
+                        <img className='h-6 w-6' src={shoppingCartIcon} alt="" />Login</a> */}
+
+                        <div className='relative h-6 w-6'><img className='h-6 w-6' src={shoppingCartIcon} alt="" />
+                            <span className={`absolute -top-3 -right-2 h-5 min-w-5 bg-red-500 border border-none rounded-full flex justify-center items-center  text-white ${navCount === 0 ? 'invisible' : 'visible'}`}><p className='text-sm'>{navCount}</p></span>
+                        </div>
+
+                        <button className='btn btn-ghost rounded-3xl text-base text-color'>Login</button>
+
+
+                    </div>
+
                     <a className="btn rounded-3xl bg-linear-65 from-[#4f39f6] to-[#9514fa] text-white">Get Started</a>
                 </div>
             </div>

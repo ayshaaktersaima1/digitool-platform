@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTotal, index }) => {
+const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTotal, index, setNavCount }) => {
 
     const handleRemoveBtn = (selectedCard, cardIndex) => {
 
@@ -10,6 +10,7 @@ const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTo
         const newTotalAfterRmv = total - selectedCard.price;
         setTotal(newTotalAfterRmv);
         toast.info(`${selectedCard.name} is Removed from Cart!`);
+        setNavCount(finalCarts.length);
 
     }
     return (

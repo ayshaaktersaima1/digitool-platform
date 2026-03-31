@@ -7,7 +7,7 @@ const SimplePricingSec = () => {
             <h1 className='text-5xl font-bold text-color pb-4 text-center'>Simple, Transparent Pricing</h1>
             <p className='text-sec pb-10 text-center'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             {/* card con */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-32 items-stretch'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10 md:pb-32 items-stretch'>
                 {/* 1st card */}
                 <div className='flex flex-col h-full text-left border border-[#f2f2f2] rounded-2xl bg-[#f9fafcFF] p-6'>
                     <h1 className='text-color text-2xl font-bold pb-2'>Starter</h1>

@@ -2,12 +2,13 @@ import { toast } from 'react-toastify';
 import AddedCard from './AddedCard';
 import EmptyCard from './EmptyCard';
 
-const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCart, setCountCart }) => {
+const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCart, setCountCart, setNavCount }) => {
 
     const handleCheckoutBtn = () => {
         setSelectedCards([]);
         toast.success('Proceeding to Checkout..');
         setTotal(0);
+        setNavCount(0);
     }
 
     return (
@@ -16,7 +17,7 @@ const AddedCards = ({ selectedCards, setSelectedCards, total, setTotal, countCar
                 selectedCards.length === 0 ? <EmptyCard></EmptyCard> : (<>
                     <h1 className='text-2xl font-bold text-color'>Your Cart</h1>
                     {
-                        selectedCards.map((selectedCard, index) => <AddedCard key={index} index={index} total={total} setTotal={setTotal} selectedCard={selectedCard} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart}></AddedCard>)
+                        selectedCards.map((selectedCard, index) => <AddedCard key={index} index={index} total={total} setTotal={setTotal} selectedCard={selectedCard} selectedCards={selectedCards} setSelectedCards={setSelectedCards} countCart={countCart} setCountCart={setCountCart} setNavCount={setNavCount}></AddedCard>)
                     }
                     <div className='flex justify-between items-center'>
                         <h3 className='text-sec'>Total:</h3>

@@ -2,12 +2,13 @@ import React, { use, useState } from 'react';
 import AllCards from './Cards/AllCards';
 import AddedCards from './Cards/AddedCards';
 
-const PremiumBtns = ({ fetchData }) => {
+const PremiumBtns = ({ fetchData, setNavCount }) => {
 
     const cardInfos = use(fetchData);
     const [selectedCards, setSelectedCards] = useState([]);
     const [activeBtn, setActiveBtn] = useState('product');
     const [total, setTotal] = useState(0);
+
 
     return (
         <div className='mt-8 lg:mt-30 space-y-4 mx-2 md:mx-[10%]  flex flex-col items-center mb-11'>
@@ -21,7 +22,7 @@ const PremiumBtns = ({ fetchData }) => {
             </div>
             {
                 activeBtn === 'product' ?
-                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} ></AllCards> : <AddedCards total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} ></AddedCards>
+                    <AllCards total={total} setTotal={setTotal} cardInfos={cardInfos} selectedCards={selectedCards} setSelectedCards={setSelectedCards} setNavCount={setNavCount}></AllCards> : <AddedCards setNavCount={setNavCount} total={total} setTotal={setTotal} selectedCards={selectedCards} setSelectedCards={setSelectedCards} ></AddedCards>
             }
         </div>
     );
