@@ -20,7 +20,7 @@ const NavBar = () => {
                             <li><a>FAQ</a></li>
                         </ul>
                     </div>
-                    <a className="text-3xl font-bold bg-linear-65 from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">DigiTools</a>
+                    <a className="text-xl md:text-3xl font-bold bg-linear-65 from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent leading-relaxed">DigiTools</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[#101727] font-semibold text-base">
