@@ -1,6 +1,6 @@
 1. Name of Project: Digitool Platform
 
-2. Description: DigiTool Platform is a fully responsive digital product marketplace built with React.js and Tailwind CSS and DaisyUI. Users can browse digital tools and can add them to a cart,Delete from cart if they want and proceed to checkout — all with smooth toast notifications and a polished UI.
+2. Description: DigiTool Platform is a fully responsive digital product marketplace built with React.js and Tailwind CSS and DaisyUI. Users can browse digital tools and can add them to a cart,Delete from cart if they want and proceed to checkout - all with smooth toast notifications and a polished UI.
 
 3. Technology that is used: 
 (i)React.js

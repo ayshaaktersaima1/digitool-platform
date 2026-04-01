@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify'
 import GetStartedSec from './components/GetStartedSec'
 import SimplePricingSec from './components/SimplePricingSec'
 import Footer from './components/Footer'
+import ReadySec from './components/ReadySec'
 
 
 const fetchData = fetch('/data.json').then(res => res.json());
@@ -26,6 +27,7 @@ function App() {
       </Suspense>
       <GetStartedSec></GetStartedSec>
       <SimplePricingSec></SimplePricingSec>
+      <ReadySec></ReadySec>
       <Footer></Footer>
 
       <ToastContainer position="top-left" />
