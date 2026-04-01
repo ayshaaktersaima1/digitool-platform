@@ -4,7 +4,7 @@ import React from 'react';
 const SimplePricingSec = () => {
     return (
         <div className='mx-2 md:mx-[10%]'>
-            <h1 className='text-5xl font-bold text-color pb-4 text-center'>Simple, Transparent Pricing</h1>
+            <h1 className='text-3xl md:text-5xl font-bold text-color pb-4 text-center'>Simple, Transparent Pricing</h1>
             <p className='text-sec pb-10 text-center'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             {/* card con */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10 md:pb-32 items-stretch'>

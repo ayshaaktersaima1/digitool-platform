@@ -6,7 +6,7 @@ import rocketImg from '../assets/rocket.png'
 const GetStartedSec = () => {
     return (
         <div className='my-10 md:my-30 py-10 md:py-30 bg-[#f1f1f1]'>
-            <h1 className=' text-center text-color text-5xl font-extrabold mb-4'>Get Started in 3 Steps</h1>
+            <h1 className=' text-center text-color text-3xl md:text-5xl font-extrabold mb-4'>Get Started in 3 Steps</h1>
             <p className='text-center text-sec'>Start using premium digital tools in minutes, not hours.</p>
             {/* card con*/}
             <div className='mx-2 md:mx-[10%] mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
