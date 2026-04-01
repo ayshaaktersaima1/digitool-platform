@@ -18,11 +18,11 @@ const AddedCard = ({ selectedCard, selectedCards, setSelectedCards, total, setTo
             <div className='flex items-center  justify-between'>
                 {/* left */}
                 <div className='flex items-center gap-4'>
-                    <div className='border border-[#f2f2f2] rounded-full p-4 bg-white'>
-                        <img className='w-8 h-8' src={selectedCard.icon} alt="" />
+                    <div className='border border-[#f2f2f2] flex justify-center items-center rounded-full h-12 w-12 md:h-16 md:w-16 shrink-0 bg-white'>
+                        <img className='w-6 md:w-8 h-6 md:h-8' src={selectedCard.icon} alt="" />
                     </div>
                     <div className='space-y-2'>
-                        <h3 className='text-lg md:text-xl font-semibold text-color'>{selectedCard.name}</h3>
+                        <h3 className='text-base md:text-xl font-semibold text-color'>{selectedCard.name}</h3>
                         <p className='font-medium text-sec'>${selectedCard.price}</p>
                     </div>
                 </div>
