@@ -13,9 +13,9 @@
 (viii)Lucide React
 
 
-4. 3 Features this project:
+4. 3 Features of this project:
 (i)Dynamic Cart System: 
-When a user adds a product by clicking "Buy Now" Button in the product card, the cart count updates instantly and the item count in the navbar changes. Users can remove added items anytime by clicking added cards Remove Button and also can clear the whole cart with the “Proceed to Checkout” button which makes the whole process smooth and easy to manage.
+When a user adds a product by clicking "Buy Now" Button in the product card, the cart count updates instantly and the item count in the navbar changes. Users can remove added items anytime by clicking added cards "Remove" Button and also can clear the whole cart with the “Proceed to Checkout” button which makes the whole process smooth and easy to manage.
 
 (ii)Toggle Between Products & Cart:
 By clicking on Product and Cart button, it toggles and show the active button with background color. By default users see the product section so they can start browsing immediately. With just one click on "Cart" button they can move to the cart view section where they will either see their selected items or see a message like-"Your cart is empty" if the cart is still empty.
