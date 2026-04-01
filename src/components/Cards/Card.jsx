@@ -1,10 +1,15 @@
-// import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal, setNavCount }) => {
     const { name, description, price, period, tag, features, icon } = cardInfo;
-
+    const isBtnActive = selectedCards.find(card => card.name === name);
     const handleBuyBtn = () => {
+
+        const isAdded = selectedCards.find(card => card.name === name);
+        if (isAdded) {
+            toast.info(`${name} is already in cart!`);
+            return;
+        }
         const newSelected = [...selectedCards, cardInfo];
         setSelectedCards(newSelected);
         setNavCount(newSelected.length);
@@ -50,8 +55,8 @@ const Card = ({ cardInfo, selectedCards, setSelectedCards, total, setTotal, setN
                         }
                     </ul>
                     <div className="mt-6">
-                        {/* <button onClick={handleBuyBtn} className={`btn text-white font-bold rounded-3xl btn-block ${buyActiveBtn === true ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{buyActiveBtn === false ? 'Buy Now' : '✓ Added to Cart!'}</button> */}
-                        <button onClick={handleBuyBtn} className='btn text-white font-bold rounded-3xl btn-block bg-linear-65 from-[#4f39f6] to-[#9514fa]'>Buy Now</button>
+                        <button onClick={handleBuyBtn} className={`btn text-white font-bold rounded-3xl btn-block ${isBtnActive ? 'bg-green-700' : 'bg-linear-65 from-[#4f39f6] to-[#9514fa]'}`}>{isBtnActive ? '✓ Added to Cart!' : 'Buy Now'}</button>
+                        {/* <button onClick={handleBuyBtn} className='btn text-white font-bold rounded-3xl btn-block bg-linear-65 from-[#4f39f6] to-[#9514fa]'>Buy Now</button> */}
                     </div>
                 </div>
             </div>
